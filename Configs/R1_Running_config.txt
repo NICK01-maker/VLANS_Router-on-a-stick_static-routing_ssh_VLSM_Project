@@ -1,0 +1,133 @@
+R1#sh run
+Building configuration...
+
+Current configuration : 1932 bytes
+!
+version 15.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+security passwords min-length 5
+!
+hostname R1
+!
+login block-for 180 attempts 5 within 120
+!
+!
+enable secret 5 $1$mERr$3Fd3mVurC6NRrUxsdCc8L0
+!
+!
+!
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+username Routeradmin privilege 15 secret 5 $1$mERr$rS6fxSMq.M0p4tGQa3Ywc0
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip ssh version 2
+no ip domain-lookup
+ip domain-name School.com
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0/0
+ description connect to computer Lab
+ ip address 192.168.1.1 255.255.255.128
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/0/1
+ no ip address
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/0/1.10
+ description vlan 10 gateway
+ encapsulation dot1Q 10
+ ip address 192.168.1.161 255.255.255.224
+!
+interface GigabitEthernet0/0/1.20
+ description vlan 20 gateway
+ encapsulation dot1Q 20
+ ip address 192.168.1.129 255.255.255.224
+!
+interface GigabitEthernet0/0/1.99
+ description gateway for vlan 99
+ encapsulation dot1Q 99
+ ip address 192.168.1.193 255.255.255.248
+!
+interface GigabitEthernet0/0/1.100
+ description int for vlan 100
+ encapsulation dot1Q 100 native
+ no ip address
+!
+interface GigabitEthernet0/0/2
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Serial0/1/0
+ description connect to the internet
+ ip address 192.168.1.201 255.255.255.252
+!
+interface Serial0/1/1
+ no ip address
+ clock rate 2000000
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip classless
+ip route 0.0.0.0 0.0.0.0 192.168.1.202 
+!
+ip flow-export version 9
+!
+!
+ip access-list extended sl_def_acl
+ deny tcp any any eq telnet
+ deny tcp any any eq www
+ deny tcp any any eq 22
+ permit tcp any any eq 22
+!
+!
+!
+!
+!
+line con 0
+ password 7 0813435B1D1C17141D051C057F7E
+ login
+!
+line aux 0
+!
+line vty 0 4
+ login local
+ transport input ssh
+line vty 5 15
+ login local
+ transport input ssh
+!
+!
+!
+end
