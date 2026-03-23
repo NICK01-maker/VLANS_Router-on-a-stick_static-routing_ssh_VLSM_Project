@@ -73,8 +73,10 @@ This project simulates a **school network infrastructure** using core networking
 
 ### Topologies
 
-Physical Topology: 
+Physical Topology:
+---
 ![Topology](Physical_Topology.png)
+---
 Logical Topology: 
 ![Topology](Logical_Topology.png)
 
