@@ -73,11 +73,11 @@ This project simulates a **school network infrastructure** using core networking
 
 ### Topologies
 
-Physical Topology:
+Physical Topology
 ---
 ![Topology](Physical_Topology.png)
+Logical Topology
 ---
-Logical Topology: 
 ![Topology](Logical_Topology.png)
 
 ---
@@ -153,10 +153,15 @@ Ce projet simule une **infrastructure réseau scolaire** en utilisant des concep
 
 ---
 
-### 🗺️ Topologies
+### Topologies
+Physical Topology
+---
+![Topology](Physical_Topology.png)
+Logical Topology
+---
+![Topology](Logical_Topology.png)
 
-Topologie Physique : *(Ajoute ton image ici)*
-Topologie Logique : *(Ajoute ton image ici)*
+---
 
 ---
 
