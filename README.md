@@ -159,6 +159,8 @@ Ce projet simule une **infrastructure réseau scolaire** en utilisant des concep
 Physical Topology
 ---
 ![Topology](Physical_Topology.png)
+---
+
 Logical Topology
 ---
 ![Topology](Logical_Topology.png)
