@@ -61,10 +61,11 @@ This project simulates a **school network infrastructure** using core networking
 
 ---
 
-### Testing
+### How to test
 
+* Open the lab file
 * Ping the Internet server from any PC
-* Access the IoT server via web browser
+* Access the IoT server via web browser usings the credentials provided in the documentation file
 * SSH into routers and switches
 * Analyze network behavior through topology
 
@@ -72,8 +73,10 @@ This project simulates a **school network infrastructure** using core networking
 
 ### Topologies
 
-Physical Topology: *(Add your image here)*
-Logical Topology: *(Add your image here)*
+Physical Topology: 
+Physical_Topology.png
+Logical Topology: 
+Logical_Topology.png
 
 ---
 
@@ -138,10 +141,11 @@ Ce projet simule une **infrastructure réseau scolaire** en utilisant des concep
 
 ---
 
-### Tests
+### Comment tester
 
-* Ping du serveur Internet depuis un PC
-* Accès au serveur IoT via navigateur web
+* Ouvrez le fichier lab
+* Faites un Ping du serveur Internet depuis un PC
+* Accès au serveur IoT via navigateur web en utilisant les données d'authentification fournies dans la documentation
 * Connexion SSH aux équipements réseau
 * Analyse du comportement via les topologies
 
